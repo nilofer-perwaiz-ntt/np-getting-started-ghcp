@@ -23,6 +23,7 @@ def test_signup_and_unregister():
     # Duplicate signup should fail
     response2 = client.post(f"/activities/{activity}/signup?email={email}")
     assert response2.status_code == 400
+
     # # Unregister
     # response3 = client.delete(f"/activities/{activity}/unregister?email={email}")
     # assert response3.status_code == 200
